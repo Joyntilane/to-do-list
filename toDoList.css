@@ -12,9 +12,9 @@ body {
 header{
     display: flex;
     align-items: center;
-    background-color: inherit;
+    background: rgb(0, 0, 0, 0.8);
+    backdrop-filter: saturate(180%) blur(10px);
     padding: 20px 40px;
-    border-radius: 5px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -22,10 +22,121 @@ header{
     width: 100%;
   }
 
+   @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none){
+    header{
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    }
+  }
+
   img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+  }
+
+  .contacts-heading{
+    display: flex;
+    position: absolute;
+    margin: 20px auto;
+    left: 500px;
+    top: 30px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 50px;
+  }
+
+  .contacts-heading h4{
+    background-color: #222831;
+    color: #ddd;
+    width: inherit;
+    text-align: center;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-family: cursive;
+  }
+
+  .contacts{
+    box-shadow: 2px 2px 5px rgba(136, 132, 132, 0.9);
+    display: flex;
+    position: absolute;
+    margin: 20px auto;
+    left: 300px;
+    top: 90px;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 50px;
+  }
+
+  header .header-items .contacts a{
+    color: black;
+    text-decoration: none;
+  }
+
+  header .header-items .contacts .facebook:hover{
+    color: #0000ff;
+  }
+
+  header .header-items .contacts .twitter:hover{
+    color: #08a0e9;
+  }
+
+  header .header-items .contacts .instagram:hover{
+    color: #ffdc80;
+    opacity: 1;
+  }
+
+  header .header-items .contacts .linkedin:hover{
+    color: #0077b5;
+  }
+
+  header .header-items .contacts .github:hover{
+    color: #171515;
+    opacity: 1;
+  }
+
+  header .header-items .contacts .whatsapp:hover{
+    color: #25d366;
+  }
+
+  .p-projects{
+    font-size: 30px;
+    font-family: cursive;
+    opacity: 0.8;
+  }
+
+  .about-image{
     height: 150px;
     width: 150px;
     border-radius: 50%;
+  }
+
+  .header-items{
+    display: flex;
+    position: absolute;
+    float: right;
+    right: 30px;
+  }
+
+  .header-items a{
+    color: #ddd;
+    text-decoration: none;
+    margin-right: 25px;
+    transition: 0.5s;
+  }
+
+  .header-items a:hover{
+    opacity: 0.5;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: 0.5s;
+    text-decoration: underline #00ADB5;
   }
   
   ul {
@@ -79,6 +190,120 @@ header{
     height: 15px;
     width: 7px;
   }
+
+  .about-btn{
+    border: none;
+    background-color: inherit;
+    color: #ddd;
+    float: right;
+    position: absolute;
+    right: 10rem;
+    font-size: inherit;
+    transition: 0.5s;
+}
+
+.header-items button:hover{
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.5s;
+    text-decoration: underline 5px #00ADB5;
+    margin-right: 0.8rem;
+}
+
+.header-items button{
+  display: inline-block;
+  width: 160px;
+  padding: 5px;
+}
+
+.form{
+  overflow: auto;
+  display: none;
+  position: fixed;
+  top: 3rem;
+  left: 16%;
+  z-index: 1;
+  width: 90%;
+  left: 10px;
+  right: 10px;
+  margin: auto;
+  max-height: 545px;
+  background: #fff;
+  padding: 2rem 1rem 1rem 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.container{
+  background-color: inherit;
+  margin: 0.5rem auto;
+  border-radius: 6px;
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  color: #000;
+  font-size: 20px;
+}
+
+.container .projects-card{
+  display: inline-block;
+}
+
+.projects-card{
+  margin-top: 20px;
+  padding: 10px;
+  background: linear-gradient(45deg, #00ADB5, #222831);
+  height: 400px;
+  color: #ddd;
+  max-width: 260px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.8s;
+}
+
+.projects-card:hover{
+  cursor: pointer;
+  box-shadow: 0px 5px 30px #393E46;
+  border-radius: 0;
+  transition: 0.8s;
+}
+
+.link{
+  background-color: #f30a0a;
+  margin: auto;
+  border: none;
+  border-radius: 5px;
+  width: auto;
+  padding: 5px;
+}
+
+.projects-card a:hover{
+  text-decoration: none;
+  color: #adb6c2;
+  transition: 1s;
+}
+
+.dep{
+  display: flex;
+  width: 240px;
+  height: 160px;
+  border-radius: 0;
+  margin-bottom: 10px;
+}
+
+.close1{
+  position: absolute;
+  right: 10px;
+  top: 0.5px;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close1:hover{
+  cursor: pointer;
+  opacity: 0.5;
+}
   
   /* Style the close button */
   .close {
@@ -94,6 +319,7 @@ header{
     background-color: #00ADB5;
     color: white;
     transition: 0.5s;
+    cursor: pointer;
   }
   .header {
     background-color: #393E46;
@@ -102,7 +328,7 @@ header{
     text-align: center;
     border-radius: 5px;
     transition: 0.7s;
-    margin-top: 200px;
+    margin-top: 150px;
   }
 
   .header:hover{
@@ -155,22 +381,101 @@ header{
     background-color: #00ADB5;
     color: white;
     transition: 0.5s;
+    cursor: pointer;
+  }
+
+  footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ddd;
+    width: 100%;
+    position: absolute;
+    margin-bottom: 0;
+    left: 0;
+    padding: 10px 40px;
+  }
+
+  footer .copy{
+    margin-left: 20px;
+  }
+
+  .footer-image{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
   }
 
 @media screen and (max-width:600px) {
     header{
       display: flex;
       align-items: center;
-      justify-content: center;
       background-color: #393E46;
       padding: 20px 40px;
-      border-radius: 5px;
       width: 100%;
     }
   
     img{
       height: 70px;
       width: 70px;
+      transition: 0.5s;
+    }
+    
+    .contacts-heading{
+      display: none;
+    }
+
+    .contacts{
+      display: block;
+      height: auto;
+      left: 200px;
+      top: 10px;
+      width: 130px;
+      box-shadow: none;
+    }
+
+    header .header-items .contacts .facebook:hover{
+      color: #0000ff;
+      box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.9);
+      padding: 3px;
+      border: 2px solid #0000ff;
+    }
+  
+    header .header-items .contacts .twitter:hover{
+      color: #08a0e9;
+      box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.9);
+      padding: 3px;
+      border: 2px solid #08a0e9;
+    }
+  
+    header .header-items .contacts .instagram:hover{
+      color: #ffdc80;
+      opacity: 1;
+      box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.9);
+      padding: 3px;
+      border: 2px solid #ffdc80;
+    }
+  
+    header .header-items .contacts .linkedin:hover{
+      color: #0077b5;
+      box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.9);
+      padding: 3px;
+      border: 2px solid #0077b5;
+    }
+  
+    header .header-items .contacts .github:hover{
+      color: #171515;
+      opacity: 1;
+      box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.9);
+      padding: 3px;
+      border: 2px solid #171515;
+    }
+  
+    header .header-items .contacts .whatsapp:hover{
+      color: #25d366;
+      box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.9);
+      padding: 3px;
+      border: 2px solid #25d366;
     }
 
     .header {
@@ -181,5 +486,30 @@ header{
       border-radius: 5px;
       transition: 0.7s;
       margin-top: 150px;
+    }
+    
+    .header-items button{
+      right: 5rem;
+      bottom: 2px;
+    }
+
+    footer{
+      display: flex;
+      align-items: center;
+      color: #ddd;
+      background: #393E46;
+      width: 100%;
+      position: absolute;
+      margin-bottom: 0;
+      left: 0;
+      padding: 10px 40px;
+    }
+
+    footer .copy{
+      margin-left: 20px;
+    }
+  
+    .footer-image{
+      display: none;
     }
   }
