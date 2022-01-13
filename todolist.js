@@ -54,6 +54,19 @@ function newElement() {
   }
 }
 
+// Close form on X click
+let x = document.getElementById('close-form');
+
+x.onclick = function(){
+    document.getElementById('frm').style.display = "none";
+}
+
+//open form on page load
+const form = document.querySelector('.form');
+(()=>{
+  form.style.display = "block";
+})();
+
 //Clearing the list
 function removeAll(){
     var lst = document.getElementsByTagName("ul");
