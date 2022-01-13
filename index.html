@@ -10,7 +10,47 @@
 </head>
 <body>
     <header>
-        <img src="https://github.com/Joyntilane/to-do-list/blob/main/T.png?raw=true" alt="Ntilane techs logo">
+        <a href="index.html"><img src="https://github.com/Joyntilane/to-do-list/blob/main/T.png?raw=true" alt="Ntilane techs logo"></a>
+        <div class="header-items" id="menu">
+            <button class="about-btn" onclick="document.getElementById('frm').style.display='block'">
+                About Thabang
+            </button>
+            <div class="form" id="frm">
+                <span id="close-form" class="close1" title="close this">&times;</span>
+                <div class="container animate">
+                    <img class="about-image" src="/Logos/T.png" alt="Ntilane techs logo">
+                    <div class="contacts-heading">
+                        <h4>Get in touch</h4>
+                    </div>
+                    <div class="contacts">
+                        <a href="https://www.facebook.com/joyj.ntilane/" target="_blank" class="facebook">Facebook</a>
+                        <a href="https://twitter.com/NtilaneThabang" target="_blank" class="twitter">Twitter</a>
+                        <a href="https://www.instagram.com/joyjntilane/" target="_blank" class="instagram">Instagram</a>
+                        <a href="https://www.linkedin.com/in/thabang-ntilane-b87b0a1b2/" target="_blank" class="linkedin">Linkedin</a>
+                        <a href="https://github.com/Joyntilane" target="_blank" class="github">GitHub</a>
+                        <a href="https://wa.me/27677392572" target="_blank" class="whatsapp">WhatsApp</a>
+                    </div>
+                    <p>Hi, I am Thabang Ntilane. A student at the Durban University of Technology. I reside at South Africa, 
+                        in KwaZulu-Natal province. I am a <strong>self-taught</strong> 
+                        frontend web developer. I am passionate about technology and always eager to
+                        learn about how things work, and how they were made. 
+                        Open to work anywhere as I am still looking to enhance my skills by learning from the experienced developers.<br><br>
+                        <div class="p-projects">Here are some of my projects...</div>
+                        <div class="projects-card">
+                            <img src="/images/depression.jpeg" alt="Depression image" class="dep">
+                            <p>Share your story, offer help and advice to other students.<br>
+                                Site made with WordPress. This is my first website ever made.
+                            </p>
+                            <a href="https://studentsvsdepression.wordpress.com/" target="_blank">
+                                <div class="link">
+                                    <span style="padding-left: 20px; margin-bottom: 5px;">Visit Site</span>
+                                </div>
+                            </a>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
     </header>
     <div class="header">
         <h2 style="margin:5px">To Do List</h2>
@@ -26,6 +66,13 @@
         <li>Take quiz</li>
     </ul>
     <button type="button" id="clear-list" onclick="removeAll()">Clear Items</button>
+    <footer>
+        <img class="footer-image" src="/Logos/T.png" alt="Ntilane techs logo">
+        <p><span class="copy">Copyright &copy; 2021-<script>
+            document.write(new Date().getFullYear())
+        </script> Ntilane Techs. All Rights Reserved.</span> 
+        </p>
+    </footer>
     <script type="text/javascript" src="todolist.js"></script>
 </body>
 </html>
